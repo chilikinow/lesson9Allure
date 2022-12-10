@@ -1,9 +1,22 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 group 'com.chilikinow'
 version '1.0-SNAPSHOT'
+
+allure {
+    version.set("2.19.0")
+    adapter { //отвечает за прявление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 { //название фреймворка
+                adapterVersion.set("2.19.0") //варсия интеграции фреймворка и Allure
+            }
+        }
+    }
+}
 
 repositories {
     mavenCentral()
@@ -37,7 +50,8 @@ dependencies {
             ,'org.assertj:assertj-core:3.11.1'
             ,'com.codeborne:selenide:6.6.6'
             ,'org.slf4j:slf4j-simple:1.7.25'
-            ,'com.github.javafaker:javafaker:1.0.2'
+            ,'com.github.javafaker:javafaker:1.0.2',
+            'io.qameta.allure:allure-selenide:2.19.0'
     )
 
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
