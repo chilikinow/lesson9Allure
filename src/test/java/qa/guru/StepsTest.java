@@ -36,7 +36,7 @@ public class StepsTest extends TestBase {
             $("#issues-tab").click();
         });
         step("Проверяем наличие задачи с номером " + ISSUENUMBER, () -> {
-            $(withText("#" + ISSUENUMBER)).shouldBe(Condition.exist);
+            $(withText("#" + ISSUENUMBER)).shouldBe(Condition.visible);
         });
 
     }

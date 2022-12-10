@@ -23,7 +23,7 @@ public class ListenerTest extends TestBase {
         $(".header-search-input").setValue("eroshenkoam/allure-example").submit();
         $(linkText("eroshenkoam/allure-example")).click();
         $("#issues-tab").click();
-        $(withText("#76")).shouldBe(Condition.exist);
+        $(withText("#76")).shouldBe(Condition.visible);
     }
 
 }
