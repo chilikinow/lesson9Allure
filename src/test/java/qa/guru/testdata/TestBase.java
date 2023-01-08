@@ -18,6 +18,7 @@ public class TestBase {
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browserSize = "1920x1080";
 
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver"); //Version=102.0.5005.61
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver"); //Version=102.0.5005.61 for linux
+
     }
 }
