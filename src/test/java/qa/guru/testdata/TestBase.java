@@ -8,8 +8,8 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-        Configuration.headless = true;
+//        Configuration.headless = true;
+        Configuration.remote = "http://localhost:4444";
         Configuration.browserSize = "1920x1080";
-//        Configuration.holdBrowserOpen = true;
     }
 }
