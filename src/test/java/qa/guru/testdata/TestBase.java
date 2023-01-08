@@ -7,9 +7,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-
-//        Configuration.headless = true;
-        Configuration.remote = "http://localhost:4444";
+        Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browserSize = "1920x1080";
     }
 }
