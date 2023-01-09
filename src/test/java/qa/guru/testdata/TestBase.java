@@ -1,6 +1,7 @@
 package qa.guru.testdata;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -42,6 +43,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
+        Selenide.closeWebDriver();
 //        Attach.screenshotAs("Last screenshot");
 //        Attach.pageSource();
 //        Attach.browserConsoleLogs();
