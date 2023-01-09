@@ -2,23 +2,19 @@ package qa.guru.testdata;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
-        capabilities.setCapability(CapabilityType.BROWSER_VERSION, "102.0"); //Version=102.0.5005.61
-
-        Configuration.browserCapabilities = capabilities;
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "http://selenoid:4444/wd/hub";
+//        Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browserSize = "1920x1080";
+        Configuration.browserVersion = "104.0";
 
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver"); //Version=102.0.5005.61 for linux
-
+        Configuration.browser = "chrome";
+        System.setProperty("webdriver.chrome.driver", "driver/chromedriver"); //104.0.5112.79//Version=102.0.5005.61 for linux
+//        System.setProperty("webdriver.chrome.driver", "C:\workspace\lesson9Allure\driver\chromedriver.exe");
     }
 }
