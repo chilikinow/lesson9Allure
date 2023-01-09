@@ -1,8 +1,6 @@
 package qa.guru;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 import qa.guru.testdata.TestBase;
 
@@ -20,8 +18,6 @@ public class StepsTest extends TestBase {
 
     @Test
     void lambdaStepsTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем страницу", () -> {
             open("https://github.com");
@@ -43,8 +39,6 @@ public class StepsTest extends TestBase {
 
     @Test
     void annotatedStepTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         WebSteps webSteps = new WebSteps();
 

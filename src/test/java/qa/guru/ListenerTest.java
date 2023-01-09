@@ -17,8 +17,6 @@ public class ListenerTest extends TestBase {
     @Test
     void checkExistIssueWithListener() {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         open("https://github.com");
         $(".header-search-input").setValue("eroshenkoam/allure-example").submit();
         $(linkText("eroshenkoam/allure-example")).click();
