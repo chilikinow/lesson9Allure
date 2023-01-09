@@ -9,6 +9,7 @@ public class TestBase {
     static void beforeAll() {
 
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.timeout = 10000;
 //        Configuration.remote = "http://selenoid:4444/wd/hub";
 //        Configuration.remote = "http://localhost:4444/wd/hub";
 //        Configuration.browserSize = "1920x1080";
