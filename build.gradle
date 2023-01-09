@@ -34,7 +34,7 @@ dependencies {
     testImplementation(
             'org.junit.jupiter:junit-jupiter:5.8.2'
             ,'org.assertj:assertj-core:3.11.1'
-            ,'com.codeborne:selenide:6.9.0'
+            ,'com.codeborne:selenide:6.11.0'
             ,'org.slf4j:slf4j-simple:2.0.6'
             ,'com.github.javafaker:javafaker:1.0.2',
             'io.qameta.allure:allure-selenide:2.19.0'
