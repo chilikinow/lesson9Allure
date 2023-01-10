@@ -16,7 +16,7 @@ public class TestBase {
     static void beforeAll() {
 
 //        Configuration.remote = "http://selenoid:4444/wd/hub";
-        Configuration.remote = "http://localhost:4444/";
+        Configuration.remote = "http://localhost:4444";
 //        Configuration.browserSize = "1920x1080";
 //        Configuration.browserVersion = "104.0";
 
