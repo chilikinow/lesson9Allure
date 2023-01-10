@@ -21,8 +21,8 @@ public class TestBase {
 //        Configuration.browser = "chrome";
 //        Configuration.browserVersion = "104.0";
 
-//        Configuration.remote = "http://selenoid:4444/wd/hub";
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "http://selenoid:4444/wd/hub";
+//        Configuration.remote = "http://localhost:4444/wd/hub";
 //        Configuration.browserSize = "1920x1080";
 
 
