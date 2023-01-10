@@ -27,10 +27,10 @@ public class TestBase {
         Configuration.timeout = 10000;
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", true);
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", false);
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
@@ -40,9 +40,9 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
 //        Attach.addVideo();
     }
 }
