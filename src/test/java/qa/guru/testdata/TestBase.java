@@ -37,34 +37,34 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        capabilities.setCapability("browserVersion", "104.0");
-        capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
-            /* How to add test badge */
-            put("name", "Test badge...");
-
-            /* How to set session timeout */
-            put("sessionTimeout", "15m");
-
-            /* How to set timezone */
-            put("env", new ArrayList<String>() {{
-                add("TZ=UTC");
-            }});
-
-            /* How to add "trash" button */
-            put("labels", new HashMap<String, Object>() {{
-                put("manual", "true");
-            }});
-
-            /* How to enable video recording */
-            put("enableVideo", true);
-        }});
+//        capabilities.setCapability("browserVersion", "104.0");
+//        capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
+//            /* How to add test badge */
+//            put("name", "Test badge...");
+//
+//            /* How to set session timeout */
+//            put("sessionTimeout", "15m");
+//
+//            /* How to set timezone */
+//            put("env", new ArrayList<String>() {{
+//                add("TZ=UTC");
+//            }});
+//
+//            /* How to add "trash" button */
+//            put("labels", new HashMap<String, Object>() {{
+//                put("manual", "true");
+//            }});
+//
+//            /* How to enable video recording */
+//            put("enableVideo", true);
+//        }});
         Configuration.browserCapabilities = capabilities;
 
     }
 
     @BeforeEach
     void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
