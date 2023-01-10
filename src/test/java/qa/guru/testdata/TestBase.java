@@ -34,9 +34,11 @@ public class TestBase {
         Configuration.timeout = 10000;
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("enableVNC", true);
+//        capabilities.setCapability("enableVideo", true);
+
+
 //        capabilities.setCapability("browserVersion", "104.0");
 //        capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
 //            /* How to add test badge */
@@ -58,7 +60,9 @@ public class TestBase {
 //            /* How to enable video recording */
 //            put("enableVideo", true);
 //        }});
-        Configuration.browserCapabilities = capabilities;
+
+
+//        Configuration.browserCapabilities = capabilities;
 
     }
 
@@ -69,9 +73,9 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+//        Attach.screenshotAs("Last screenshot");
+//        Attach.pageSource();
+//        Attach.browserConsoleLogs();
+//        Attach.addVideo();
     }
 }
